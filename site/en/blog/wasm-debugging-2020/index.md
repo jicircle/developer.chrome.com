@@ -6,18 +6,20 @@ layout: "layouts/blog-post.njk"
 authors:
   - ingvarstepanyan
 date: 2020-12-10
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cuyrdAwj3IOp4rkKALdK.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SQooNUx2HjOAFjsBPMja.jpg'
 alt: ''
 tags:
   - devtools-engineering
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 {% YouTube id='VBMHswhun-s' %}
 
 ## The road so far {: #past }
 
-A year ago, Chrome [announced initial support](/blog/webassembly-debug)
+A year ago, Chrome [announced initial support](/blog/wasm-debugging-2019)
 for native WebAssembly debugging in Chrome DevTools.
 
 We demonstrated basic stepping support and talked about opportunities
@@ -426,3 +428,6 @@ working on from here on:
 Meanwhile, please help us out by trying the current beta on your own code and reporting any found
 issues to
 [https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue](https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue).
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

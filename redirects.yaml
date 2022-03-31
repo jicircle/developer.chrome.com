@@ -30,6 +30,9 @@ redirects:
 - from: /docs/extensions/mv3/background_migration
   to: /docs/extensions/mv3/migrating_to_service_workers
 
+- from: /docs/extensions/mv3/background_pages
+  to: /docs/extensions/mv3/service_workers
+
 - from: /docs/multidevice/android/customtabs/
   to: /docs/android/custom-tabs/overview
 
@@ -41,6 +44,63 @@ redirects:
 
 - from: /docs/webstore/pricing/
   to: /docs/webstore/money/
+
+- from: /docs/devtools/javascript/blackbox-chrome-extension-scripts/
+  to: /docs/devtools/javascript/ignore-chrome-extension-scripts/
+
+- from: /summit
+  to: /devsummit/
+
+- from: /blog/wasm-debugging-2020/
+  to: /blog/wasm-debugging/
+
+- from: /docs/privacy-sandbox/attribution-reporting-introduction/
+  to: /docs/privacy-sandbox/attribution-reporting/
+
+- from: /docs/privacy-sandbox/attribution-reporting-in-short/
+  to: /docs/privacy-sandbox/attribution-reporting/
+
+# Removal of /overview pages
+
+- from: /docs/android/custom-tabs/overview/
+  to: /docs/android/custom-tabs/
+
+- from: /docs/android/trusted-web-activity/overview/
+  to: /docs/android/trusted-web-activity/
+
+- from: /multidevice/webview/overview/
+  to: /multidevice/android/
+
+- from: /multidevice/webview/overview/
+  to: /multidevice/webview/
+
+# CWS payments/apps purge
+- from: /docs/webstore/hosted_apps
+  to: /docs/webstore
+- from: /docs/webstore/migrating
+  to: /docs/webstore
+- from: /docs/webstore/get_started_simple
+  to: /docs/webstore/publish/
+- from: /docs/webstore/apps_vs_extensions
+  to: /docs/webstore
+- from: /docs/webstore/distribution
+  to: /docs/webstore
+- from: /docs/webstore/launching
+  to: /docs/webstore
+- from: /docs/webstore/choosing
+  to: /docs/webstore
+- from: /docs/webstore/samples
+  to: /docs/webstore
+- from: /docs/webstore/get_started
+  to: /docs/webstore
+- from: /docs/webstore/inline_installation
+  to: /docs/webstore
+- from: /docs/webstore/authentication
+  to: /docs/webstore
+- from: /docs/webstore/one_time_payments
+  to: /docs/webstore
+- from: /docs/webstore/payments-iap
+  to: /docs/webstore
 
 # Fixes #675
 - from: /extensions/manifestVersion
@@ -132,13 +192,16 @@ redirects:
 - from: /docs/devtools/rendering-tools/
   to: /docs/devtools/evaluate-performance/
 
+- from: /docs/devtools/updates/
+  to: /tags/new-in-devtools/
+
 # TODO(kaycebasques): Update these old DevTools redirects
 
 - from: /devtools/
   to: https://developers.google.com/web/tools/chrome-devtools
 
 - from: /devtools/docs/blackboxing
-  to: https://developers.google.com/web/tools/chrome-devtools/javascript/reference#blackbox
+  to: https://developers.google.com/web/tools/chrome-devtools/javascript/reference#ignore-list
 
 - from: /devtools/docs/commandline-api
   to: https://developers.google.com/web/tools/chrome-devtools/console/utilities
@@ -178,6 +241,9 @@ redirects:
 
 - from: /extensions/crx
   to: /docs/extensions/mv3/hosting
+
+- from: /extensions/event_pages/
+  to: /docs/extensions/mv2/background_pages/
 
 - from: /extensions/getstarted_arc
   to: https://developer.android.com/chrome-os/intro.html
@@ -234,6 +300,11 @@ redirects:
 
 - from: /docs/extensions/declarativenetrequest
   to: /docs/extensions/reference/declarativeNetRequest
+
+  # MV2 docs that have been removed, but their MV3 version still exists
+
+- from: /docs/extensions/mv2/single_purpose
+  to: /docs/extensions/mv3/single_purpose/
 
   # Group redirects
 

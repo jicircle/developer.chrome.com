@@ -6,6 +6,10 @@ date: 2019-03-01
 description: "How to view nodes, search for nodes, edit nodes, reference nodes in the Console, break on node changes, and more."
 authors:
   - kaycebasques
+tags:
+  - get-started
+  - prototype-fixes
+  - html
 ---
 
 Complete these interactive tutorials to learn the basics of viewing and
@@ -24,26 +28,16 @@ When you're interested in a particular DOM node, **Inspect** is a fast way to op
 and investigate that node.
 
 1. Right-click **Michelangelo** below and select **Inspect**.
-
      * Michelangelo
      * Raphael
-
      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/psbHIPohm8wsZkGA7WXl.png", alt="Inspecting a node", width="800", height="780" %}
-
      The **Elements** panel of DevTools opens.
      `<li>Michelangelo</li>` is highlighted in the **DOM Tree**.
-
      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Cz2LKMmJ3sVjkDdfW4i8.png", alt="Highlighting the Michelangelo< node", width="800", height="483" %}
-
-[inspect]: /web/tools/chrome-devtools/images/shared/inspect.png
-
-1. Click the **Inspect** ![Inspect][inspect]{: .inline-icon } icon in the top-left corner of
+1. Click the **Inspect** icon in the top-left corner of
    DevTools.
-
    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2canqdvrgnHBayY1VsLM.png", alt="The Inspect icon", width="800", height="545" %}
-
 1. Click the **Tokyo** text below.
-
      * Tokyo
      * Beirut
 
@@ -206,11 +200,11 @@ You can force nodes to remain in states like `:active`, `:hover`, `:focus`,
 
 1. Right-click **The Lord of the Flies** above and select **Inspect**.
 
-[more]: /web/tools/chrome-devtools/dom/imgs/more-actions.png
-
 1. Right-click `<li class="demo--hover">The Lord of the Flies</li>` and select **Force
    State** > **:hover**. See [Appendix: Missing options](#options) if you don't see this option.
    The background color remains orange even though you're not actually hovering over the node.
+
+[more]: /web/tools/chrome-devtools/dom/imgs/more-actions.png
 
 ### Hide a node {: #hide }
 
@@ -392,7 +386,7 @@ The page's HTML is now different than its DOM. In other words, HTML represents
 initial page content, and the DOM represents current page content. When JavaScript
 adds, removes, or edits nodes, the DOM becomes different than the HTML.
 
-[mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+[mdn]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction
 
 See [Introduction to the DOM][mdn]{: .external } to learn more.
 

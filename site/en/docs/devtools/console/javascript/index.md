@@ -6,6 +6,8 @@ authors:
 date: 2018-04-18
 #updated: YYYY-MM-DD
 description: "Learn how to run JavaScript in the Console."
+tags:
+  - javascript
 ---
 
 This interactive tutorial shows you how to run JavaScript in the [Chrome DevTools][1] Console. See
@@ -98,7 +100,9 @@ the **Console** to view and change the page's `window` or `DOM` at that moment i
 for a powerful debugging workflow. See [Get Started With Debugging JavaScript][8] for an interactive
 tutorial.
 
-The **Console** also has a set of convenience functions that make it easier to interact with a page.
+The **Console** also supports a set of format specifiers. See [Format and style messages in the Console](/docs/devtools/console/format-style) to explore all the method to format and style console messages.
+
+Apart from that, the **Console** also has a set of convenience functions that make it easier to interact with a page.
 For example:
 
 - Rather than typing `document.querySelector()` to select an element, you can type `$()`. This

@@ -4,9 +4,12 @@ title: "CSS features reference"
 authors:
   - kaycebasques
   - jecelynyeen
+  - sofiayem
 date: 2017-06-09
 #updated: YYYY-MM-DD
 description: "Discover new workflows for viewing and changing CSS in Chrome DevTools."
+tags:
+  - css
 ---
 
 Discover new workflows in this comprehensive reference of Chrome DevTools features related to
@@ -84,6 +87,39 @@ Use the **Computed** tab. See [View only the CSS that's actually applied to an e
 
 Check the **Show All** checkbox in the **Computed** tab. See [View only the CSS that's actually
 applied to an element][6].
+
+### View `@supports` at-rules {: #supports }
+
+The **Styles** tab shows you the `@supports` CSS at-rules if they are applied to an element. For example, inspect the following element:
+
+<div class="box"></div>
+<style>
+  .box {
+  width: 300px;
+  height: 30px;
+  text-align: center;
+}
+@supports (background: lab(0% 0 0)) {
+  .box {
+    background: lab(90% -44 55);
+  }
+  .box::after { content: "I support CIELAB color space!" }
+}
+@supports not (background: lab(0% 0 0)) {
+  .box {
+    background:#c9b1d6;
+  }
+  .box::after { content: "I don\'t support CIELAB color space :(" }
+}
+</style>
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Lw1ZveiO2lxVFDgylmnC.png", alt="View @supports at-rules", width="800", height="453" %}
+
+If your browser supports the `lab()` function, the element is green, otherwise it's purple.
+
+{% Aside %}
+**Note**: At the time of writing, only Safari [supports the CIELAB color space](https://caniuse.com/?search=lab).
+{% endAside %}
 
 ### View an element's box model {: #box-model }
 
@@ -222,7 +258,10 @@ To add a declaration to an existing style rule:
 3.  Enter a property name and press <kbd>Enter</kbd>.
 4.  Enter a valid value for that property and press <kbd>Enter</kbd>.
 
+{% Img src="image/admin/dQMFYTxsVz5WxQpuvRga.png", alt="Changing the value of a declaration", width="800", height="547" %}
+
 **Figure 13**. Adding the `border-bottom-style:groove` declaration to a style rule
+
 
 ### Change a declaration name or value {: #change-declaration }
 
@@ -230,7 +269,6 @@ Double-click a declaration's name or value to change it. See [Change declaration
 keyboard shortcuts][17] for shortcuts for quickly incrementing or decrementing a value by 0.1, 1,
 10, or 100 units.
 
-{% Img src="image/admin/dQMFYTxsVz5WxQpuvRga.png", alt="Changing the value of a declaration", width="800", height="547" %}
 
 ### Change declaration values with keyboard shortcuts {: #values-shortcuts }
 
@@ -394,14 +432,14 @@ To open the **Angle Clock**:
 [4]: #select
 [5]: #computed
 [6]: #computed
-[7]: https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model
+[7]: https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS/Box_model
 [8]: #select
 [9]: /docs/devtools/css#pseudostates
 [10]: /docs/devtools/command-menu
 [11]: /docs/devtools/css/print-preview
 [12]: #add-declaration-inline
 [13]: #add-declaration-to-rule
-[14]: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity#Selector_Types
+[14]: https://developer.mozilla.org/docs/Web/CSS/Specificity#Selector_Types
 [15]: #select
 [16]: #select
 [17]: #values-shortcuts

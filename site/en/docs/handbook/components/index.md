@@ -554,7 +554,7 @@ Shortcode object fields allow for modifying how the embed is presented:
 
 Images should always use the {% raw %}`{% Img %}`{% endraw %} shortcode. This
 shortcode will be generated for you when you upload your image to our CDN.
-See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/) for upload instructions.
+See the [Add an image or video guide](/docs/handbook/how-to/add-media/) for upload instructions.
 
 ```md
 {% raw %}{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
@@ -614,6 +614,27 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque iure eveniet
 assumenda ea natus perspiciatis, atque totam fugit labore amet facere,
 dignissimos sequi cumque repellat dolorum, quaerat voluptatibus sit!
 
+### Captions
+
+To include a caption along with an image, use `<figure>` with `<figcaption>` and
+place the `Img` shortcode snippet inside:
+
+```md
+<figure>
+{% raw %}{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
+  <figcaption>
+    A good boy.
+  </figcaption>
+</figure>
+```
+
+<figure>
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
+  <figcaption>
+    A good boy.
+  </figcaption>
+</figure>
+
 ## Lists
 See the [Lists section of the Grammar, mechanics, and usage post](https://web.dev/handbook/grammar/#lists)
 for information about when to use each list type.
@@ -644,6 +665,86 @@ for unordered lists.
 - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
+
+### Definition list
+
+```md
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+```
+
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+
+## Tabs
+
+Use `web-tabs` component to display information in a form of horizontal tabs.
+Attribute `title` becomes the title of the corresponding tab panel.
+
+````html
+<web-tabs>
+  <web-tab title="Tab 1 (html)">
+    <p>I'm content of Tab 1</p>
+  </web-tab>
+  <web-tab title="Tab 2 (markdown)">
+
+    Here goes content of Tab 2. Now **with** some _markdown_.
+
+    You must include a line break between the html and markdown to get the
+    markdown to work (this is a limiation of markdown parsers).
+
+  </web-tab>
+  <web-tab title="Tab 3 (with code)">
+
+    This is Tab 3. It has a code snippet inside.
+
+    You must include a line break between the html and teh markdown to get the
+    markdown to work. Also, be sure to unindent the markdown otherwise syntax
+    highlighting will not work.
+
+```js
+const hello = 'world';
+```
+
+  </web-tab>
+</web-tabs>
+````
+
+<web-tabs>
+  <web-tab title="Tab 1 (html)">
+    <p>I'm content of Tab 1</p>
+  </web-tab>
+  <web-tab title="Tab 2 (markdown)">
+
+    Here goes content of Tab 2. Now **with** some _markdown_.
+
+    You must include a line break between the html and markdown to get the
+    markdown to work (this is a limiation of markdown parsers).
+
+  </web-tab>
+  <web-tab title="Tab 3 (with code)">
+
+    This is Tab 3. It has a code snippet inside.
+
+    You must include a line break between the html and teh markdown to get the
+    markdown to work. Also, be sure to unindent the markdown otherwise syntax
+    highlighting will not work.
+
+```js
+const hello = 'world';
+```
+
+  </web-tab>
+</web-tabs>
+
 
 ## Tables
 
@@ -958,7 +1059,7 @@ responsive. To prevent this from happening add the `fixed-table` class.
 
 Videos should always use the {% raw %}`{% Video %}`{% endraw %} shortcode. This
 shortcode will be generated for you when you upload your video to our CDN.
-See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/) for upload instructions.
+See the [Add an image or video guide](/docs/handbook/how-to/add-media/) for upload instructions.
 
 ```md
 {% raw %}{% Video src='video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4' %}{% endraw %}
@@ -971,7 +1072,7 @@ Note that the video `src` property can either be a string or an array of strings
 for multiple sources.
 {% endAside %}
 
-See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/).
+See the [Add an image or video guide](/docs/handbook/how-to/add-media/).
 
 ## YouTube
 

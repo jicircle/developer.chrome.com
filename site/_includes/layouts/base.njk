@@ -7,8 +7,10 @@
     <meta name="robots" content="noindex">
     {%- endif %}
 
-    {% include "partials/meta.njk" %}
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feeds/blog.xml">
+    {% include 'partials/meta.njk' %}
+    {% block feed %}
+      <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feeds/blog.xml">
+    {% endblock %}
 
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/regular/latin.woff2">
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/medium/latin.woff2">
@@ -18,6 +20,8 @@
     {% else %}
       <link rel="stylesheet" href="/css/main.css">
     {% endif %}
+
+    {% block chromescss %}{% endblock %}
 
     <script type="module" src="{{ helpers.hashForProd('/js/main.js') }}"></script>
     {% if process.env.NODE_ENV === 'production' %}
@@ -33,7 +37,9 @@
       {% endfor %}
     {% endif %}
 
+    {# This needs to be include'd, because it expands 11ty variables #}
     <script>{% include 'partials/script.js' %}</script>
+
   </head>
   <body>
     <div class="scaffold">
@@ -60,5 +66,9 @@
       {% endblock %}
     </div>
     {% include 'partials/cookie-banner.njk' %}
+
+    {% block chromescripts %}{% endblock %}
+
+    {% block chromeanalytics %}{% endblock %}
   </body>
 </html>

@@ -6,6 +6,9 @@ authors:
 date: 2017-01-04
 #updated: YYYY-MM-DD
 description: "Learn how to use Chrome DevTools to find and fix JavaScript bugs."
+tags:
+  - get-started
+  - javascript
 ---
 
 This tutorial teaches you the basic workflow for debugging any JavaScript issue in DevTools. Read
@@ -20,7 +23,7 @@ debugging.
 
 1.  Click **Open Demo**. The demo opens in a new tab.
 
-    [Open Demo][1]
+    <a href="https://googlechrome.github.io/devtools-samples/debug-js/get-started" target="_blank">Open Demo</a>
 
 2.  Enter `5` in the **Number 1** text box.
 3.  Enter `1` in the **Number 2** text box.
@@ -286,7 +289,6 @@ See [Pause Your Code With Breakpoints][4] to learn when and how to use each type
 There's a couple of code stepping controls that weren't explained in this tutorial. See [Step over
 line of code][5] to learn more.
 
-[1]: https://googlechrome.github.io/devtools-samples/debug-js/get-started
 [2]: https://support.google.com/chrome/answer/95464
 [3]: /docs/devtools/javascript/breakpoints
 [4]: /docs/devtools/javascript/breakpoints

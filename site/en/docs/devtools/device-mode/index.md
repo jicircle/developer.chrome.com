@@ -6,6 +6,9 @@ authors:
 date: 2015-04-13
 #updated: YYYY-MM-DD
 description: "Use virtual devices in Chrome's Device Mode to build mobile-first websites."
+tags:
+  - emulate
+  - test
 ---
 
 Use Device Mode to approximate how your page looks and performs on a mobile device.
@@ -278,7 +281,7 @@ own alpha, beta, and gamma values.
 [6]: https://en.wikipedia.org/wiki/Order_of_approximation#First-order
 [7]: /docs/devtools/remote-debugging
 [8]: #orientation
-[9]: https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio
-[10]: https://developer.mozilla.org/en-US/docs/Glossary/User_agent
+[9]: https://developer.mozilla.org/docs/Web/API/Window/devicePixelRatio
+[10]: https://developer.mozilla.org/docs/Glossary/User_agent
 [11]: #type
 [12]: /docs/devtools#community

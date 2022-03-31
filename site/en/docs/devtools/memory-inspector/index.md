@@ -1,12 +1,16 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Inspect JavaScript ArrayBuffer with the Memory inspector"
+title: "Memory Inspector: Inspect JavaScript ArrayBuffer"
 authors:
   - jecelynyeen
 date: 2020-08-20
 #updated: YYYY-MM-DD
 description: "Use the Memory inspector to inspect an ArrayBuffer in JavaScript, as well as a WebAssembly.Memory"
 ---
+
+{% Aside %}
+This feature is available from Chrome 91 onwards. You can check your version with `chrome://version/`. 
+{% endAside %}
 
 Use the new **Memory inspector** to inspect an `ArrayBuffer` in JavaScript, as well as a `WebAssembly.Memory`. 
 ## Open the Memory Inspector {: #open }
@@ -37,7 +41,7 @@ There are a few ways to open the **Memory inspector**.
 
 ### Inspect multiple objects {: #open-multiple }
 
-1. You can inspect [DataView](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) or [TypedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) as well. For example, `b2` is a `TypedArray`. To inspect that, right click on the `b2` property and select **Reveal in Memory Inspector panel** (No icon for `TypedArray` or `DataView` yet).
+1. You can inspect [DataView](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView) or [TypedArray](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) as well. For example, `b2` is a `TypedArray`. To inspect that, right click on the `b2` property and select **Reveal in Memory Inspector panel** (No icon for `TypedArray` or `DataView` yet).
 2. A new tab is opened in the **Memory inspector**. Please note that you can inspect multiple objects at once. 
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZaLWbrktT6N3sHMhyLHA.png", alt="New tab in the Memory inspector", width="800", height="602" %}
 
@@ -82,7 +86,7 @@ The **Memory inspector** consists of 3 main areas:
 
 Let's inspect the memory together. 
 
-1. Follow these steps to [start](/#open-debug) the debugging.
+1. Follow these steps to [start](#open-debug) the debugging.
 2. Change the address to `0x00000027` in the **address input**. 
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/S8m0VP5MuCr9YkZQx7mR.png", alt="address input", width="800", height="602" %}
 3. Observe the **ASCII representation** and the **value interpretations**. All values are empty at the moment. 
